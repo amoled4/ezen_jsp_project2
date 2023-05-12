@@ -11,5 +11,6 @@
 	
 	<a href="/mem/join"><button>회원가입</button></a>
 	<a href="/mem/login"><button>로그인</button></a>
+	<a href="/mem/list"><button>관리자 페이지</button></a>
 </body>
 </html>

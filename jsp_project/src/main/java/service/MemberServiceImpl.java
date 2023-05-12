@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +22,12 @@ public class MemberServiceImpl implements MemverService {
 	public int register(MemberVO mvo) {
 		log.info(">>> register service 진입");
 		return mdao.insert(mvo);
+	}
+
+	@Override
+	public List<MemberVO> list() {
+		log.info(">>> list service 진입");
+		return mdao.selectList();
 	}
 
 }

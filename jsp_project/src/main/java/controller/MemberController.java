@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -62,6 +64,13 @@ public class MemberController extends HttpServlet {
 			isOk = msv.register(mvo);
 			log.info(">>> 회원가입 > "+(isOk>0 ? "성공":"실패"));
 			destPage = "/";   // index 페이지로 이동
+			break;
+			
+		case "list":
+			List<MemberVO> list = new ArrayList<MemberVO>();
+			list = msv.list();
+			request.setAttribute("list", list);
+			destPage = "/member/list.jsp";
 			break;
 		}
 		rdp = request.getRequestDispatcher(destPage);
