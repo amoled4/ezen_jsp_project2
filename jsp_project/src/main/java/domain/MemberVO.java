@@ -24,9 +24,14 @@ Primary key(mid)
 	private String memail;
 	private String regdate;
 	private String last_login;
+	private String mgrant;
 	
 	public MemberVO() {}
 
+	
+	public MemberVO(String mid) {
+		this.mid = mid;
+	}
 	
 	// login
 	// 아이디, 비밀번호
@@ -54,8 +59,16 @@ Primary key(mid)
 		this.memail = memail;
 		this.regdate = regdate;
 	}
-	
 
+	// edit
+	public MemberVO(String mid, String mpw, String mphone, String memail) {
+		super();
+		this.mid = mid;
+		this.mpw = mpw;
+		this.mphone = mphone;
+		this.memail = memail;
+	}
+	
 	// modify
 	// 전부
 	public MemberVO(String mid, String mpw, String mname, String mphone, String memail, String regdate,
@@ -68,6 +81,97 @@ Primary key(mid)
 		this.regdate = regdate;
 		this.last_login = last_login;
 	}
+	
+	
+	public String getMid() {
+		return mid;
+	}
+
+
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
+
+
+	public String getMpw() {
+		return mpw;
+	}
+
+
+	public void setMpw(String mpw) {
+		this.mpw = mpw;
+	}
+
+
+	public String getMname() {
+		return mname;
+	}
+
+
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+
+
+	public String getMphone() {
+		return mphone;
+	}
+
+
+	public void setMphone(String mphone) {
+		this.mphone = mphone;
+	}
+
+
+	public String getMemail() {
+		return memail;
+	}
+
+
+	public void setMemail(String memail) {
+		this.memail = memail;
+	}
+
+
+	public String getRegdate() {
+		return regdate;
+	}
+
+
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+
+
+	public String getLast_login() {
+		return last_login;
+	}
+
+
+	public void setLast_login(String last_login) {
+		this.last_login = last_login;
+	}
+
+	
+
+
+	public String getMgrant() {
+		return mgrant;
+	}
+
+
+	public void setMgrant(String mgrant) {
+		this.mgrant = mgrant;
+	}
+
+
+	@Override
+	public String toString() {
+		return "MemberVO [mid=" + mid + ", mpw=" + mpw + ", mname=" + mname + ", mphone=" + mphone + ", memail="
+				+ memail + ", regdate=" + regdate + ", last_login=" + last_login + ", mgrant=" + mgrant + "]";
+	}
+
+
 
 
 	

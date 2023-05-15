@@ -10,4 +10,14 @@ public interface MemberDAO {
 
 	List<MemberVO> selectList();
 
+	MemberVO selectOne(MemberVO mvo2);
+
+	int lastLogin(String id);
+
+	MemberVO selOnemod(MemberVO mvo2);
+
+	int update(MemberVO mvoEdit);
+
+	int delete(MemberVO mvo3);
+
 }

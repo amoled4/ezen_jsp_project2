@@ -42,4 +42,48 @@ public class MemberDAOImpl implements MemberDAO {
 		return list;
 	}
 
+
+	@Override
+	public MemberVO selectOne(MemberVO mvo2) {
+		// TODO Auto-generated method stub
+		return sql.selectOne(NS+"login", mvo2);
+	}
+
+
+	@Override
+	public int lastLogin(String id) {
+		int isOk = sql.update(NS+"logout", id);
+		if(isOk>0) {
+			sql.commit();
+		}
+		return isOk;
+	}
+
+	@Override
+	public MemberVO selOnemod(MemberVO mvo2) {
+		// TODO Auto-generated method stub
+		return sql.selectOne(NS+"modify", mvo2);
+	}
+
+
+	@Override
+	public int update(MemberVO mvoEdit) {
+		int isOk = sql.update(NS+"edit",mvoEdit);
+		if(isOk>0) {
+			sql.commit();
+		}
+		return isOk;
+	}
+
+
+	@Override
+	public int delete(MemberVO mvo3) {
+		int isOk = sql.delete(NS+"delete",mvo3);
+		if(isOk>0) {
+			sql.commit();
+		}
+		return isOk;
+	}
+
+
 }

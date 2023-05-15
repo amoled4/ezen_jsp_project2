@@ -10,4 +10,14 @@ public interface MemverService {
 
 	List<MemberVO> list();
 
+	MemberVO login(MemberVO mvo2);
+
+	int lastLogin(String id);
+
+	MemberVO modify(MemberVO mvo2);
+
+	int edit(MemberVO mvoEdit);
+
+	int delete(MemberVO mvo3);
+
 }
