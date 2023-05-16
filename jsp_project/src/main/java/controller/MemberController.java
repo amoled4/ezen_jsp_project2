@@ -135,14 +135,25 @@ public class MemberController extends HttpServlet {
 			break;
 			
 		case "edit":
-			String id = request.getParameter("id");
-			String pw = request.getParameter("pw");
-			String phone = request.getParameter("phone");
-			String email = request.getParameter("email");
-			MemberVO mvoEdit = new MemberVO(id, pw, phone, email);
+			
+			MemberVO mvoEdit = new MemberVO(
+					request.getParameter("id"),
+					request.getParameter("pw"),
+					request.getParameter("phone"),
+					request.getParameter("email"));
 			
 			int isOk = msv.edit(mvoEdit);
-			System.out.println(">>> 정보수정 > "+(isOk > 0 ? "성공":"실패"));
+			log.info(">>> 정보수정 > "+(isOk > 0 ? "성공":"실패"));
+			
+//			if(isOk>0) {
+//				// case 1 session 객체에 값을 담기
+//				HttpSession ses = request.getSession();
+//				ses.setAttribute("ses", mvoEdit);
+//				
+//				// case 2 login_auth case로 mvoEdit 객체 보내기
+//				request.setAttribute("mvo", mvoEdit)
+//			}
+			
 			
 			destPage = "/";
 			break;

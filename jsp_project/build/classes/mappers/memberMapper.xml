@@ -8,7 +8,7 @@
   		values(#{mid}, #{mpw}, #{mname}, #{mphone}, #{memail})
   	</insert>
   	
-  	<select id="list" resultType="map">
+  	<select id="list" resultType="mvo">
   		select mid, memail, regdate from member order by regdate
   	</select>
   	

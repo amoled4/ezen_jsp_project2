@@ -12,11 +12,12 @@
 	
 	
 	<c:if test="${ses.mid ne null }">
-		${ses.mid } 님이 로그인하였습니다. <br>
+		${ses.mname } 님이 로그인하였습니다. <br>
 		계정 생성일 : ${ses.regdate } <br>
 		마지막 접속 : ${ses.last_login } <br>
 		<a href="/mem/modify"><button>회원정보수정</button></a>
 		<a href="/mem/logout"><button>로그아웃</button></a>
+		<a href="/brd/list"><button>게시판</button></a>
 	</c:if>
 	
 	

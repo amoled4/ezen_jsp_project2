@@ -33,5 +33,6 @@
 		</tr>
 		</c:forEach>
 	</table>
+	<a href="/"><button type="button">메인으로</button></a>
 </body>
 </html>

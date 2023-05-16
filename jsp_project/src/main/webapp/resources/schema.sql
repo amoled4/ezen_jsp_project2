@@ -17,3 +17,14 @@ regdate datetime default now(),
 last_login datetime default null,
 Primary key(mid)
 );
+
+
+-- 2023-05-16
+create table board(
+bno int not null auto_increment,
+title varchar(100) not null,
+writer varchar(20) not null,
+regdate datetime default now(),
+content text,
+readcount int default 0,
+Primary key(bno));

@@ -19,7 +19,7 @@ last_login
 메인버튼
  -->
 	<h1>회원정보 수정</h1>
-	<form action="/mem/edit">
+	<form action="/mem/edit" method="post">
 	<table>
 		<tr>
 			<th>아이디</th>
@@ -54,5 +54,7 @@ last_login
 	<button type="submit">수정완료</button>
 	</form>
 	<a href="/mem/delete?mid=${mvo.mid }"><button type="button">회원탈퇴</button></a>
+	<a href="/"><button type="button">취소</button></a>
+	
 </body>
 </html>
