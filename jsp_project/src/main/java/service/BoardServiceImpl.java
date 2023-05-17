@@ -47,4 +47,10 @@ public class BoardServiceImpl implements BoardService {
 		log.info(">>> remove service 진입");
 		return bdao.delete(bno);
 	}
+
+	@Override
+	public int count(int bno) {
+		log.info(">>> readcount service 진입");
+		return bdao.countUp(bno);
+	}
 }

@@ -61,4 +61,10 @@ public class BoardDAOImpl implements BoardDAO {
 		}
 		return isOk;
 	}
+
+	@Override
+	public int countUp(int bno) {
+		
+		return sql.update(NS+"count", bno);
+	}
 }

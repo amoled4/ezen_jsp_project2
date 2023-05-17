@@ -47,5 +47,9 @@
 	<br>
 	<a href="/brd/register"><button type="button">글작성</button></a>
 	<a href="/"><button type="button">메인으로</button></a>
+	<form action="" method="post">
+	<input type="text" name="search">
+	<button type="submit">검색</button>
+	</form>
 </body>
 </html>
