@@ -28,3 +28,11 @@ regdate datetime default now(),
 content text,
 readcount int default 0,
 Primary key(bno));
+
+create table comment(
+cno int not null auto_increment,
+bno int default 0,
+writer varchar(100) default “unknown”,
+content varchar(1000) not null,
+regdate datetime default now(),
+primary key(cno));
